@@ -1,0 +1,113 @@
+:root {
+  --dark-blue: #fbfbfc;
+  --dark-graying-blue: #3f4a56;
+
+  --bright-red: #df5537;
+  --dark-red: #882b17;
+
+}
+
+html,body {
+  background: var(--dark-blue);
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--dark-graying-blue);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.header {
+  overflow: auto;
+}
+
+.heading {
+  font-size: 32px;
+}
+.heading--primary {
+   text-align: center;
+}
+
+.container {
+  margin: 2em 25%;
+  border-radius: 5px;
+}
+
+
+form {
+ position: relative;
+}
+label {
+  display: block;
+  margin: 0 0 5px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0 0 0.6em;
+  display: block;
+}
+input[type=text] {
+  background: #fff;
+  border: 1px solid var(--dark-graying-blue);
+  border-radius: 5px;
+  padding: 8px 15px;
+  width: 300px;
+}
+
+.button-cta {
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  height: 45px;
+  width: 300px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.button--primary {
+  background: var(--bright-red);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  z-index: 99999;
+}
+
+.button-cta__shadow {
+  background: var(--dark-red);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: block;
+  height: 20px;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 300px;
+  bottom: -5px;
+  transition: all linear 1s;
+}
+
+/* ON CLICK / HOVER */
+.button--primary:hover ~ .button-cta__shadow,
+.button--primary:focus ~ .button-cta__shadow {
+  bottom: -4px;
+}
